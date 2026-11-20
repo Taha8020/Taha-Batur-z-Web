@@ -1,0 +1,79 @@
+/* =========================================
+   İLETİŞİM SAYFASI — EK STİLLER
+   (style.css'in üzerine eklenir)
+   ========================================= */
+
+.c-wrap { max-width: 1200px; margin: 0 auto; padding: 0 4%; }
+
+/* ---- Sayfa başlığı ---- */
+.c-hero {
+  background: radial-gradient(circle at 30% 40%, rgba(192, 132, 252, 0.09) 0%, transparent 55%),
+              radial-gradient(circle at 80% 80%, rgba(115, 75, 109, 0.1) 0%, transparent 50%),
+              #232526;
+  padding: 8rem 0 5.5rem;
+}
+.c-hero .c-wrap { max-width: 860px; }
+.c-title { font-size: 4.4rem; font-weight: 800; line-height: 1.18; color: #fff; letter-spacing: -0.5px; margin: 2rem 0 1.6rem; }
+.c-lead { font-size: 1.8rem; color: #cbd5e1; line-height: 1.6; max-width: 640px; }
+
+/* ---- Ana alan ---- */
+.c-main { background: #202223; border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 7rem 0 10rem; }
+.c-grid { display: grid; grid-template-columns: 5fr 6fr; gap: 5rem; align-items: start; }
+.c-h { font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 2.8rem; padding-bottom: 1.4rem; border-bottom: 1px solid rgba(255, 255, 255, 0.07); }
+
+/* Doğrudan iletişim (style.css'teki .contact-card yeniden kullanılır) */
+.c-direct { display: flex; flex-direction: column; gap: 1.6rem; }
+.c-direct .contact-card { padding: 2rem 2.2rem; }
+.c-direct .contact-card-info { min-width: 0; }
+.c-direct .contact-card-value { overflow-wrap: anywhere; }
+
+/* ---- Mesaj formu ---- */
+.c-form { background: #1a1c1d; border: 1px solid rgba(192, 132, 252, 0.12); border-radius: 16px; padding: 3rem; }
+.c-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.c-field { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2rem; }
+.c-field label { font-size: 1.3rem; font-weight: 600; color: #9ca3af; }
+.c-field input, .c-field textarea {
+  width: 100%; background: #232526; color: #f3f4f6; font-size: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 1.3rem 1.5rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.c-field textarea { min-height: 16rem; resize: vertical; line-height: 1.6; }
+.c-field input::placeholder, .c-field textarea::placeholder { color: #6b7280; }
+.c-field input:focus, .c-field textarea:focus { border-color: #c084fc; box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.18); }
+.c-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.c-send { width: 100%; justify-content: center; border: 0; cursor: pointer; }
+.c-send:disabled { opacity: 0.6; cursor: wait; transform: none; }
+.c-status { min-height: 2.4rem; margin-top: 1.6rem; font-size: 1.4rem; line-height: 1.5; color: #9ca3af; }
+.c-status.ok { color: #6ee7b7; }
+.c-status.err { color: #fca5a5; }
+
+/* ---- Harita ---- */
+.c-map { margin-top: 7rem; }
+.c-map-head { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; margin-bottom: 2.4rem; }
+.c-map-head .c-h { margin: 0; padding: 0; border: 0; }
+.c-map-head p { font-size: 1.45rem; color: #9ca3af; margin-top: 0.6rem; }
+.c-map-frame { height: 44rem; border-radius: 16px; overflow: hidden; border: 1px solid rgba(192, 132, 252, 0.18); background: #1a1c1d; }
+/* Koyu tema uyumu — açık haritaya dönmek için bu satırı sil */
+.c-map-frame iframe { width: 100%; height: 100%; border: 0; display: block; filter: invert(92%) hue-rotate(180deg) brightness(0.95) contrast(0.9); }
+
+/* Klavye odağı */
+.c-main a:focus-visible, .c-main button:focus-visible { outline: 2px solid #c084fc; outline-offset: 3px; }
+
+/* ---- Mobil ---- */
+@media (max-width: 900px) {
+  .c-grid { grid-template-columns: 1fr; gap: 5rem; }
+  .c-title { font-size: 3.4rem; }
+}
+@media (max-width: 720px) {
+  .c-hero { padding: 6rem 0 4rem; }
+  .c-title { font-size: 2.8rem; }
+  .c-lead { font-size: 1.6rem; }
+  .c-main { padding: 5rem 0 7rem; }
+  .c-row { grid-template-columns: 1fr; gap: 0; }
+  .c-form { padding: 2.2rem; }
+  .c-map { margin-top: 5rem; }
+  .c-map-frame { height: 34rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

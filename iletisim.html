@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Taha Batur Öz</title>
+    <meta name="description" content="Taha Batur Öz ile iletişime geç — mesaj gönder veya e-posta, LinkedIn ve GitHub üzerinden ulaş.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Share+Tech&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="iletisim.css">
+    <link rel="icon" href="images/logos/tb_monogram.png">
+</head>
+<body>
+
+    <!-- Header (diğer sayfalarla aynı) -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo-link">
+                <img src="images/logos/taha_batur_oz_wordmark_white.png" alt="Taha Batur Öz Logo" id="nav-uzun-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav_home">Anasayfa</a></li>
+                <li><a href="hakkimda.html" data-i18n="nav_about">Hakkımda</a></li>
+                <li><a href="index.html#projeler" data-i18n="nav_projects">Projeler</a></li>
+                <li><a href="iletisim.html" class="active" data-i18n="nav_contact">İletişim</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="lang-switch">
+                    <button class="lang-btn" id="btn-en" type="button" aria-label="English">
+                        <svg class="flag-icon" viewBox="0 0 60 30" width="16" height="11">
+                            <clipPath id="uk-clip"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+                            <clipPath id="uk-diag"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+                            <g clip-path="url(#uk-clip)">
+                                <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+                                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                                <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#uk-diag)" stroke="#C8102E" stroke-width="4"/>
+                                <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                                <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+                            </g>
+                        </svg>
+                        <span>ENG</span>
+                    </button>
+                    <button class="lang-btn active" id="btn-tr" type="button" aria-label="Türkçe">
+                        <svg class="flag-icon" viewBox="0 0 1200 800" width="16" height="11">
+                            <rect width="1200" height="800" fill="#E30A17"/>
+                            <circle cx="425" cy="400" r="200" fill="#ffffff"/>
+                            <circle cx="475" cy="400" r="160" fill="#E30A17"/>
+                            <polygon points="583.3,400 664.6,426.4 614.4,357.2 614.4,442.8 664.6,373.6" fill="#ffffff"/>
+                        </svg>
+                        <span>TR</span>
+                    </button>
+                </div>
+                <a href="#mesaj" class="contact-btn">
+                    <span class="icon">✉</span>
+                    <span data-i18n="nav_contact_btn">İletişime geç</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sayfa başlığı -->
+        <section class="c-hero">
+            <div class="c-wrap">
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    <span class="status-text" data-i18n="c_status">Back-end Geliştirici &amp; Sistem Altyapısı</span>
+                </div>
+                <h1 class="c-title" data-i18n="c_title">Benimle iletişime geç</h1>
+                <p class="c-lead" data-i18n="c_lead">Bir proje, staj ya da iş birliği fikrin varsa mesaj bırak. Dilersen aşağıdaki kanallardan doğrudan da ulaşabilirsin.</p>
+            </div>
+        </section>
+
+        <section class="c-main">
+            <div class="c-wrap">
+                <div class="c-grid">
+
+                    <!-- Sol: Doğrudan iletişim -->
+                    <div>
+                        <h2 class="c-h" data-i18n="c_direct">Doğrudan iletişim</h2>
+                        <div class="c-direct">
+                            <a href="mailto:tahabaturoz@gmail.com" class="contact-card">
+                                <div class="contact-card-icon contact-icon-mail">
+                                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                </div>
+                                <div class="contact-card-info">
+                                    <span class="contact-card-label" data-i18n="f_email">E-posta</span>
+                                    <span class="contact-card-value">tahabaturoz@gmail.com</span>
+                                </div>
+                                <span class="contact-card-arrow">↗</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/taha-batur-%C3%B6z-3892553a3/" target="_blank" rel="noopener noreferrer" class="contact-card">
+                                <div class="contact-card-icon contact-icon-linkedin">
+                                    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                </div>
+                                <div class="contact-card-info">
+                                    <span class="contact-card-label">LinkedIn</span>
+                                    <span class="contact-card-value">Taha Batur Öz</span>
+                                </div>
+                                <span class="contact-card-arrow">↗</span>
+                            </a>
+                            <a href="https://github.com/Taha8020" target="_blank" rel="noopener noreferrer" class="contact-card">
+                                <div class="contact-card-icon">
+                                    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                </div>
+                                <div class="contact-card-info">
+                                    <span class="contact-card-label">GitHub</span>
+                                    <span class="contact-card-value">github.com/Taha8020</span>
+                                </div>
+                                <span class="contact-card-arrow">↗</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Sağ: Mesaj formu -->
+                    <div id="mesaj">
+                        <h2 class="c-h" data-i18n="c_form">Mesaj gönder</h2>
+                        <form class="c-form" id="msg-form" method="post">
+                            <div class="c-row">
+                                <div class="c-field">
+                                    <label for="f-name" data-i18n="f_name">Ad Soyad</label>
+                                    <input id="f-name" name="name" type="text" autocomplete="name" maxlength="80" required>
+                                </div>
+                                <div class="c-field">
+                                    <label for="f-email" data-i18n="f_email">E-posta</label>
+                                    <input id="f-email" name="email" type="email" autocomplete="email" placeholder="ornek@mail.com" maxlength="120" required>
+                                </div>
+                            </div>
+                            <div class="c-field">
+                                <label for="f-msg" data-i18n="f_msg">Mesajın</label>
+                                <textarea id="f-msg" name="message" maxlength="2000" required data-i18n-ph="ph_msg" placeholder="Projeni ya da sorunu kısaca anlat"></textarea>
+                            </div>
+                            <input class="c-hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+                            <button type="submit" class="btn-primary c-send" data-i18n="f_send">Mesajı gönder</button>
+                            <p class="c-status" id="form-status" role="status" aria-live="polite"></p>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Harita: Çağlayan Adliyesi -->
+                <div class="c-map">
+                    <div class="c-map-head">
+                        <div>
+                            <h2 class="c-h" data-i18n="m_title">Konum</h2>
+                            <p data-i18n="m_sub">Çağlayan Adliyesi çevresi, İstanbul</p>
+                        </div>
+                        <a class="btn-secondary" href="https://www.google.com/maps/dir/?api=1&amp;destination=%C3%87a%C4%9Flayan+Adliyesi+%C4%B0stanbul" target="_blank" rel="noopener noreferrer" data-i18n="m_btn">Yol tarifi al</a>
+                    </div>
+                    <div class="c-map-frame">
+                        <iframe title="Çağlayan Adliyesi — Google Haritalar" src="https://maps.google.com/maps?q=%C3%87a%C4%9Flayan%20Adliyesi%20%C4%B0stanbul&amp;z=15&amp;hl=tr&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <a href="index.html" class="footer-logo-link">
+                    <img src="images/logos/taha_batur_oz_wordmark_white.png" alt="Taha Batur Öz Logo" class="footer-logo">
+                </a>
+                <p class="footer-desc" data-i18n="footer_desc">Back-end Geliştirici &amp; Sistem Altyapısı</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html" data-i18n="nav_home">Anasayfa</a>
+                <a href="index.html#projeler" data-i18n="nav_projects">Projeler</a>
+                <a href="iletisim.html" data-i18n="nav_contact">İletişim</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy" data-i18n="footer_copy">© 2024 Taha Batur Öz. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="iletisim.js"></script>
+</body>
+</html>

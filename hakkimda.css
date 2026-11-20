@@ -1,0 +1,379 @@
+/* =========================================
+   HAKKIMDA SAYFASI — EK STİLLER
+   (style.css'in üzerine eklenir)
+   ========================================= */
+
+/* ---- Hakkımda'ya özel ek giriş animasyonları ---- */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero alanı biraz daha geç gelsin (main animasyonundan sonra) */
+.about-hero-container > * {
+  animation: fadeSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.about-hero-container > *:nth-child(1) { animation-delay: 0.25s; }
+.about-hero-container > *:nth-child(2) { animation-delay: 0.38s; }
+.about-hero-container > *:nth-child(3) { animation-delay: 0.50s; }
+
+/* Timeline kartları sırayla gelsin */
+.timeline-item {
+  animation: fadeSlideUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.timeline-item:nth-child(1) { animation-delay: 0.45s; }
+.timeline-item:nth-child(2) { animation-delay: 0.60s; }
+.timeline-item:nth-child(3) { animation-delay: 0.75s; }
+
+/* Skill grupları sırayla gelsin */
+.skill-group {
+  animation: fadeSlideUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.skill-group:nth-child(1) { animation-delay: 0.50s; }
+.skill-group:nth-child(2) { animation-delay: 0.62s; }
+.skill-group:nth-child(3) { animation-delay: 0.74s; }
+.skill-group:nth-child(4) { animation-delay: 0.86s; }
+
+/* Özet kutusu en sona gelsin */
+.about-summary-box {
+  animation: fadeSlideUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.95s both;
+}
+
+/* ---- Sayfa Hero Girişi ---- */
+.about-hero {
+  background: radial-gradient(circle at 30% 40%, rgba(192, 132, 252, 0.09) 0%, transparent 55%),
+              radial-gradient(circle at 80% 80%, rgba(115, 75, 109, 0.1) 0%, transparent 50%),
+              #232526;
+  padding: 9rem 0 7rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.about-hero-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+.about-hero-title {
+  font-size: 4.4rem;
+  font-weight: 800;
+  line-height: 1.18;
+  color: #ffffff;
+  margin: 2rem 0 1.8rem;
+  letter-spacing: -0.5px;
+}
+
+.about-hero-lead {
+  font-size: 1.9rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  max-width: 680px;
+}
+
+.about-hero-lead strong {
+  color: #c084fc;
+  font-weight: 600;
+}
+
+/* ---- Ana İçerik Alanı ---- */
+.about-section {
+  padding: 8rem 0 12rem;
+  background-color: #202223;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+/* ---- Kolon Başlıkları ---- */
+.about-col-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 3.6rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.col-title-icon {
+  font-size: 1.8rem;
+}
+
+/* =========================================
+   ZAMAN ÇİZELGESİ (Timeline)
+   ========================================= */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* Dikey çizgi */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.65rem;
+  top: 1rem;
+  bottom: 1rem;
+  width: 2px;
+  background: linear-gradient(to bottom, #c084fc, rgba(192, 132, 252, 0.2));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 2.4rem;
+  position: relative;
+  padding-bottom: 3.6rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Nokta */
+.timeline-dot {
+  position: absolute;
+  left: -1.35rem;
+  top: 0.3rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #232526;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.dot-active {
+  background-color: #c084fc;
+  box-shadow: 0 0 10px rgba(192, 132, 252, 0.6);
+  animation: pulse-dot 2.5s infinite ease-in-out;
+}
+
+.dot-work {
+  background-color: #60a5fa;
+  box-shadow: 0 0 8px rgba(96, 165, 250, 0.5);
+}
+
+.dot-edu {
+  background-color: #6ee7b7;
+  box-shadow: 0 0 8px rgba(110, 231, 183, 0.4);
+}
+
+.timeline-content {
+  flex: 1;
+  background-color: #1a1c1d;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 2rem 2.4rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timeline-content:hover {
+  border-color: rgba(192, 132, 252, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 16px rgba(192, 132, 252, 0.08);
+}
+
+.timeline-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.timeline-badge {
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  letter-spacing: 0.3px;
+}
+
+.badge-edu {
+  background-color: rgba(110, 231, 183, 0.1);
+  color: #6ee7b7;
+  border: 1px solid rgba(110, 231, 183, 0.25);
+}
+
+.badge-work {
+  background-color: rgba(96, 165, 250, 0.1);
+  color: #60a5fa;
+  border: 1px solid rgba(96, 165, 250, 0.25);
+}
+
+.timeline-date {
+  font-size: 1.25rem;
+  color: #6b7280;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.timeline-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+
+.timeline-sub {
+  font-size: 1.35rem;
+  color: #c084fc;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.timeline-desc {
+  font-size: 1.45rem;
+  color: #9ca3af;
+  line-height: 1.65;
+}
+
+/* =========================================
+   YETKİNLİKLER (Skills Grid)
+   ========================================= */
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.skill-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skill-group-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #6b7280;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skill-tag {
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0.55rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+}
+
+.sk-purple {
+  background-color: rgba(192, 132, 252, 0.08);
+  color: #d8b4fe;
+  border-color: rgba(192, 132, 252, 0.2);
+}
+.sk-purple:hover { background-color: rgba(192, 132, 252, 0.16); border-color: rgba(192, 132, 252, 0.4); }
+
+.sk-blue {
+  background-color: rgba(96, 165, 250, 0.08);
+  color: #93c5fd;
+  border-color: rgba(96, 165, 250, 0.2);
+}
+.sk-blue:hover { background-color: rgba(96, 165, 250, 0.16); border-color: rgba(96, 165, 250, 0.4); }
+
+.sk-green {
+  background-color: rgba(52, 211, 153, 0.08);
+  color: #6ee7b7;
+  border-color: rgba(52, 211, 153, 0.2);
+}
+.sk-green:hover { background-color: rgba(52, 211, 153, 0.16); border-color: rgba(52, 211, 153, 0.4); }
+
+.sk-orange {
+  background-color: rgba(251, 191, 36, 0.08);
+  color: #fcd34d;
+  border-color: rgba(251, 191, 36, 0.2);
+}
+.sk-orange:hover { background-color: rgba(251, 191, 36, 0.16); border-color: rgba(251, 191, 36, 0.4); }
+
+/* ---- Özet Kutusu ---- */
+.about-summary-box {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, rgba(192, 132, 252, 0.07) 0%, rgba(192, 132, 252, 0.03) 100%);
+  border: 1px solid rgba(192, 132, 252, 0.2);
+  border-left: 3px solid #c084fc;
+  border-radius: 12px;
+  padding: 2rem 2.4rem;
+}
+
+.about-summary-box p {
+  font-size: 1.5rem;
+  color: #cbd5e1;
+  line-height: 1.75;
+}
+
+/* =========================================
+   Mobil Uyumluluk
+   ========================================= */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+
+  .about-hero-title {
+    font-size: 3.4rem;
+  }
+
+  .about-hero-lead {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .about-hero {
+    padding: 6rem 0 5rem;
+  }
+
+  .about-hero-title {
+    font-size: 2.8rem;
+  }
+
+  .about-section {
+    padding: 5rem 0 8rem;
+  }
+
+  .timeline {
+    padding-left: 1.6rem;
+  }
+
+  .timeline-content {
+    padding: 1.6rem 1.8rem;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
